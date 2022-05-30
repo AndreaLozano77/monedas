@@ -9,6 +9,22 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    /********/
+    scroll-behavior: smooth;
+}
+
+*:before, *:after{
+    box-sizing: inherit;
+}
 
 .container {
     width: 40%;
@@ -20,6 +36,27 @@ body {
     border-radius: 4px;
     background-color:rgb(189, 186, 186);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom right, #03045E 0%, #0082e6 74%);
+    color: white;
+}
+
+.header h1, .header p{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.header >.titulo{
+    font-size: 2rem;
+}
+
+.header p{
+    font-size: 1.5rem;
 }
 
 h1{

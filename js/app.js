@@ -49,7 +49,8 @@ try {
             precio.innerHTML = datos[contador].precio + "$";
 
             buttonCard.setAttribute('class', 'button-card');
-            buttonCard.innerHTML = "Agregar";
+            buttonCard.setAttribute('href', './form-pedido.html');
+            buttonCard.innerHTML = "Ordenar";
 
             card.appendChild(imgCoin);
             imgCoin.appendChild(img);
