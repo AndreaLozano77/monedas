@@ -1,0 +1,607 @@
+/*
+1.Posicionamiento
+2.Modelo de caja (box model)
+3.Tipografía
+4.Visuales (border radius, shadow box...)
+5.Otros o miscelaneos
+*/
+
+/*   Autor: Andrea Lozano Cataño */
+
+:root {
+    /* Colores */
+    --strong-blue: #0d324d;
+    --soft-orange: #f1dbc6;
+    --blue-one: #2497e9;
+    --blue-two: #dae6ee;
+    --strong-black: #201e1c;
+    --soft-black: #282623;
+    --soft-white: #faf8f7;
+    --white: #fff;
+    --grey: #bababa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    /********/
+    scroll-behavior: smooth;
+}
+
+*:before, *:after{
+    box-sizing: inherit;
+}
+
+
+/*====================================== */
+/*========  HEADER JONMIRCHA   ========= */
+/*====================================== */
+
+.header{
+    position: sticky;
+    top: 0;
+    padding: 2rem;
+    background-image: linear-gradient(to bottom right, #03045E 0%, #0082e6 74%);
+    color: white;
+}
+
+.header h1, .header p{
+    margin: 10px auto;
+    text-align: center;
+}
+.header p{
+    font-size: 1.5rem;
+}
+
+.panel{
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.85);
+    transition: transform .3s ease;
+    transform: translate(-100%, 0);
+}
+
+.panel.is-active{
+    transform: translate(0,0);
+}
+
+.panel-btn{
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vw;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2497e9;
+}
+
+.menu{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.menu a{
+    padding: 4rem;
+    width: inherit;
+    display: block;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s ease;
+}
+
+.menu a:hover{
+    font-weight: bold;
+    color: rgba(34, 34, 34, 0.85);
+    background-color: rgba(36, 151, 233, 0.85);
+}
+
+
+/*====================================== */
+/*======    FIN DE NAV BAR   =========== */
+/*====================================== */
+
+
+
+.backgroundImg {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-image: url('../assets/img/coinGold.jpg');
+    /* por buenas prácticas */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.header--title-container .header--button {
+    position: absolute;
+    left: calc(50% - 130px);
+    top: 270px;
+    display: block;
+    margin-top: 65px;
+    padding: 15px;
+    width: 250px;
+    height: 48px;
+    background-color: var(--soft-white);
+    /*Sombra*/
+    box-shadow: 5px 7px 8px rgb(89 73 30 / 16%);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--strong-black);
+}
+
+.header--button span {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url("../assets/icons/arrow.png");
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--soft-white);
+}
+
+.main-exchange-container {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.main-exchange-container--title {
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+.main-exchange-container h2 {
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--strong-black);
+}
+
+.main-exchange-container p {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
+}
+
+/*-------------------------------------------*/
+/**************   TARJETAS   *****************/
+/*-------------------------------------------*/
+
+
+.main-cards-section h2{
+    padding-top: 140px;
+}
+
+.main-cards-container {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 40px;
+    border: 3px solid green;
+}
+
+.main-cards {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+    height: 90%;
+    font-family: "Inter", sans-serif;
+    border: 3px solid red;
+}
+
+.card{
+    width: 235px;
+    height: auto;
+    min-width: 235px;
+    max-width: 300px;
+    margin: 30px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: .3s;
+    /* border: 2px solid #eee; */
+    border: 3px solid orange;
+}
+
+.card:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.card-img {
+    width: 100%;
+}
+
+.button-card {
+    width: 100%;
+    height: 38px;
+    /* margin-bottom: 20px; */
+    padding: 10px 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    color: white;
+    background-color: orange;
+}
+
+.button-card:hover{
+    background-color: rgb(235, 176, 67);
+}
+/*-------------------------------------------*/
+/* ENCABEZADO: Cards */
+/*-------------------------------------------*/
+
+.info-card h4 {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.08rem;
+}
+
+.info-card p {
+    margin-bottom: 25px;
+}
+
+.info-card .precio {
+    font-size: 18px;
+    margin-top: 10px;
+    /* margin-bottom: 5px; */
+}
+
+
+
+/*-------------------------------------------*/
+/* EL DIV CONTENEDOR DE LOS BENEFICIOS       */
+/*-------------------------------------------*/
+
+
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: #03045E;
+    background-image: linear-gradient(to bottom right, #03045E 0%, #0082e6 74%);
+}
+
+
+.product-detail--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.product-detail--title h2 {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--white);
+}
+
+.product-detail--title p {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+.product-cards--container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+.product-detail--card {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    min-height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: #03045E;
+    border-radius: 7px;
+    box-shadow: 9px 7px 8px rgb(0 0 0 / 16%);
+}
+
+.product-detail--card .clock {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url("../assets/icons/clock.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product--card-title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--soft-white);
+}
+
+.product--card-body {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: var(--soft-white); 
+}
+
+.product-detail--card .dollar {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url("../assets/icons/dollar-sign.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product-detail--card .check-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url("../assets/icons/check-circle.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*============ ABOUT =============*/
+
+
+.about {
+    /* position: relative; */
+    width: 100%;
+    min-width: 320px;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 10%;
+    background-color: #03045E;
+    background-image: linear-gradient(to bottom right, #03045E 0%, #0082e6 74%);
+}
+
+.about-container{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    /* min-height: 100vh; */
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+}
+
+.about-container--title h1{
+    padding-top: 130px;
+    padding-bottom: 50px;
+}
+
+.about-container--title p{
+    line-height: 2.5rem;
+    text-align: justify;
+    color: white;
+}
+
+/*============ SERVICES =============*/
+
+.services {
+    /* position: relative; */
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 10px 10px;
+    background-color: #03045E;
+    background-image: linear-gradient(to bottom right, #03045E 0%, #0082e6 74%);
+}
+
+.services-container{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+}
+
+.services-container--title h1{
+    padding-top: 130px;
+    padding-bottom: 50px;
+}
+
+.services-container--title p{
+    line-height: 2.5rem;
+    text-align: justify;
+    color: white;
+}
+
+/*============ CONTACT =============*/
+
+.contact {
+    /* position: relative; */
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 10px 10px;
+    background-color: #03045E;
+    background-image: linear-gradient(to bottom right, #03045E 0%, #0082e6 74%);
+}
+
+.contact-container{
+    width: 90%;
+    margin: auto;
+    height: 100%;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+}
+
+.contact-container--title h1{
+    padding-top: 130px;
+    padding-bottom: 50px;
+}
+
+.contact-container--title p{
+    line-height: 2.5rem;
+    text-align: justify;
+    color: white;
+}
+
+/*=============================*/
+
+.plans--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 50px;  
+}
+
+.plans--title h2 {
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--strong-black);
+}
+
+.plans--title p {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+/*---------------------------------------*/
+/*---------------  FOOTER  --------------*/
+/*---------------------------------------*/
+
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 250px;
+    background-color: #03045E;
+    background-image: linear-gradient(to bottom right,#03045E 0%, #0082e6 74%);
+}
+
+footer section {
+    display: flex;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    list-style: none;
+}
+
+footer .right ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+    list-style: none;
+}
+
+.left a {
+    text-decoration: none;
+    color: white;
+}
+
+.right a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*************************/
+/****** Privacidad  ******/
+/*************************/
+
+
+#privacy{
+    width: 100%;
+    min-height: 80vh;
+}
+
+#privacy h2{
+    text-align: center;
+}

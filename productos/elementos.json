@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "nombre": "Moneda 1774",
+        "precio": 10,
+        "img": "../assets/img/tengyart.jpg"
+    },
+
+    {
+        "id": 2,
+        "nombre": "Moneda 1775",
+        "precio": 18,
+        "img": "../assets/img/tengyart.jpg"
+    },
+
+    {
+        "id": 3,
+        "nombre": "Moneda 1776",
+        "precio": 14,
+        "img": "../assets/img/tengyart.jpg"
+    },
+
+    {
+        "id": 4,
+        "nombre": "Moneda 1777",
+        "precio": 22,
+        "img": "../assets/img/tengyart.jpg"
+    },
+
+    {
+        "id": 5,
+        "nombre": "Moneda 1774",
+        "precio": 10,
+        "img": "../assets/img/tengyart.jpg"
+    },
+
+    {
+        "id": 6,
+        "nombre": "Moneda 1775",
+        "precio": 18,
+        "img": "../assets/img/tengyart.jpg"
+    },
+
+    {
+        "id": 7,
+        "nombre": "Moneda 1776",
+        "precio": 14,
+        "img": "../assets/img/tengyart.jpg"
+    },
+
+    {
+        "id": 8,
+        "nombre": "Moneda 1777",
+        "precio": 22,
+        "img": "../assets/img/tengyart.jpg"
+    }
+
+]
