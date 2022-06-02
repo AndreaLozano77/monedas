@@ -1,9 +1,64 @@
-<?php
 
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$edad = $_POST['edad'];
 
-echo "Hola, mi nombre es $nombre $apellido y tengo $ $edad años.";
 
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&family=Poppins:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 930px)">
+    <link rel="stylesheet" href="./css/phone.css" media="(max-width: 560px)"> -->
+    <link rel="stylesheet" href="../css/form-pedido.css">
+    <title>Monedas</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="titulo">VENTA DE MONEDAS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis velit adipisci placeat minima consectetur
+            dolores.</p>
+    </header>
+    <div class="container">
+        <h1>ORDER FORM</h1>
+        <form action="">
+            <div style="width: 90%; margin:auto; margin-bottom: 20px; border: 2px solid blue;">
+                <p>DESCRIPCIÓN: <br><br>
+
+                <?php
+
+                $descripcion = $_GET['descripcion'];
+                echo "$descripcion"
+
+                ?>
+
+                </p>
+
+            </div>
+           
+            
+            <hr>
+            <label for="">Quantity:</label>
+            <input type="number" name="quantity" id="quantity">
+            <label for="">Name:</label>
+            <input type="text" name="name" id="name">
+            <label for="">Email:</label>
+            <input type="email" name="email" id="mail">
+            <label for="">Address:</label>
+            <input type="text" name="address" id="address">
+            <label for="">City:</label>
+            <input type="text" name="City" id="city">
+            <label for="">Zip:</label>
+            <input type="text" name="zip" id="zip">
+            <label for="">Country:</label>
+            <input type="text" name="country" id="country">
+            <button type="submit" class="btn-submit">Click here to Submit</button>
+        </form>
+        <p>Thank you. We will email you shortly to confirm you order.</p>
+    </div>
+</body>
+</html>

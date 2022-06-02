@@ -27,6 +27,7 @@ try {
             let infoCard = document.createElement('div');
 
             let titulo = document.createElement('h4');
+            let descripcion = document.createElement('p');
             let precio = document.createElement('p');
 
             let buttonCard = document.createElement('a');
@@ -43,19 +44,22 @@ try {
             infoCard.setAttribute('class', 'info-card');
 
             titulo.setAttribute('class', 'titulo');
+            descripcion.setAttribute('class', 'descripcion');
             precio.setAttribute('class', 'precio');
 
             titulo.innerHTML = datos[contador].nombre;
+            descripcion.innerHTML = datos[contador].descripcion;
             precio.innerHTML = datos[contador].precio + "$";
 
             buttonCard.setAttribute('class', 'button-card');
-            buttonCard.setAttribute('href', './form-pedido.html');
+            buttonCard.setAttribute('href', './forms/orden.php?descripcion=' + datos[contador].descripcion);
             buttonCard.innerHTML = "Ordenar";
 
             card.appendChild(imgCoin);
             imgCoin.appendChild(img);
             card.appendChild(infoCard);
             infoCard.appendChild(titulo);
+            infoCard.appendChild(descripcion);
             infoCard.appendChild(precio);
             infoCard.appendChild(buttonCard);
 
@@ -68,3 +72,4 @@ try {
 } catch (error) {
     console.log(e);
 }
+console.log(descripcion);
