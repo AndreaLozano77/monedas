@@ -52,7 +52,7 @@ try {
             precio.innerHTML = datos[contador].precio + "$";
 
             buttonCard.setAttribute('class', 'button-card');
-            buttonCard.setAttribute('href', './forms/orden.php?descripcion=' + datos[contador].descripcion);
+            buttonCard.setAttribute('href', './forms/orden.php?descripcion=' + datos[contador].nombre +'&nombre='  + datos[contador].descripcion +'&precio=' + datos[contador].precio +'&cantidad=' + datos[contador].cantidad);
             buttonCard.innerHTML = "Ordenar";
 
             card.appendChild(imgCoin);

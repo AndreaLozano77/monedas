@@ -27,38 +27,55 @@
         <h1>ORDER FORM</h1>
         <form action="">
             <div style="width: 90%; margin:auto; margin-bottom: 20px; border: 2px solid blue;">
-                <p>DESCRIPCIÓN: <br><br>
-
+                <p><b>NOMBRE:</b><br>
                 <?php
-
+                $nombre = $_GET['nombre'];
+                echo "$nombre"
+                ?>
+                </p><br>
+                <p><b>DESCRIPCIÓN:</b><br>
+                <?php
                 $descripcion = $_GET['descripcion'];
                 echo "$descripcion"
-
                 ?>
+                </p><br>
 
+                <p><b>PRECIO: </b><br>
+                <?php
+                $precio = $_GET['precio'];
+                echo "$precio"
+                ?>
+                </p><br>
+
+                <p><b>CANTIDAD: </b><br>
+                <?php
+                $cantidad = $_GET['cantidad'];
+                echo "$cantidad"
+                ?>
                 </p>
 
             </div>
-           
             
             <hr>
-            <label for="">Quantity:</label>
+            <label for="">Cantidad:</label>
             <input type="number" name="quantity" id="quantity">
-            <label for="">Name:</label>
+            <label for="">Nombre:</label>
             <input type="text" name="name" id="name">
             <label for="">Email:</label>
             <input type="email" name="email" id="mail">
-            <label for="">Address:</label>
+            <label for="">Dirección:</label>
             <input type="text" name="address" id="address">
-            <label for="">City:</label>
+            <label for="">Ciudad:</label>
             <input type="text" name="City" id="city">
-            <label for="">Zip:</label>
+            <label for="">Zona Postal:</label>
             <input type="text" name="zip" id="zip">
-            <label for="">Country:</label>
+            <label for="">País:</label>
             <input type="text" name="country" id="country">
-            <button type="submit" class="btn-submit">Click here to Submit</button>
+            <button type="submit" class="btn-submit">Enviar</button>
         </form>
-        <p>Thank you. We will email you shortly to confirm you order.</p>
+        <hr>
+
+        <p>Gracias. En breve lo contactaremos por email.</p>
     </div>
 </body>
 </html>
