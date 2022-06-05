@@ -52,8 +52,8 @@ try {
             precio.innerHTML = datos[contador].precio + "$";
 
             buttonCard.setAttribute('class', 'button-card');
-            buttonCard.setAttribute('href', './forms/orden.php?descripcion=' + datos[contador].nombre +'&nombre='  + datos[contador].descripcion +'&precio=' + datos[contador].precio +'&cantidad=' + datos[contador].cantidad);
-            buttonCard.innerHTML = "Ordenar";
+            buttonCard.setAttribute('href', './forms/orden.php?nombre=' + datos[contador].nombre + '&descripcion=' + datos[contador].descripcion +'&precio=' + datos[contador].precio +'&cantidad=' + datos[contador].cantidad);
+            buttonCard.innerHTML = "Pedir";
 
             card.appendChild(imgCoin);
             imgCoin.appendChild(img);

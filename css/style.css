@@ -218,7 +218,7 @@ main {
     height: 100%;
     margin: auto;
     padding: 40px;
-    border: 3px solid green;
+    /* border: 3px solid green; */
 }
 
 .main-cards {
@@ -229,7 +229,7 @@ main {
     margin: auto;
     height: 90%;
     font-family: "Inter", sans-serif;
-    border: 3px solid red;
+    /* border: 3px solid red; */
 }
 
 .card{

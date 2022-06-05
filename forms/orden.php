@@ -24,15 +24,17 @@
             dolores.</p>
     </header>
     <div class="container">
-        <h1>ORDER FORM</h1>
+        <h1>FORMULARIO DE PEDIDO</h1>
+        <hr>
         <form action="">
-            <div style="width: 90%; margin:auto; margin-bottom: 20px; border: 2px solid blue;">
+            <div style="width: 100%; margin:auto; margin-bottom: 20px;">
                 <p><b>NOMBRE:</b><br>
                 <?php
                 $nombre = $_GET['nombre'];
                 echo "$nombre"
                 ?>
                 </p><br>
+
                 <p><b>DESCRIPCIÓN:</b><br>
                 <?php
                 $descripcion = $_GET['descripcion'];
@@ -43,7 +45,7 @@
                 <p><b>PRECIO: </b><br>
                 <?php
                 $precio = $_GET['precio'];
-                echo "$precio"
+                echo "$" . "$precio"
                 ?>
                 </p><br>
 
@@ -55,7 +57,11 @@
                 </p>
 
             </div>
-            
+            <p>Solo necesita ingresar su dirección de correo electrónico a continuación si es un cliente recurrente.
+            Este formulario es solo para una moneda. Vuelva a pulsar el botón 'PEDIR' en la siguiente moneda que desee comprar. 
+            Este formulario se mostrará de nuevo. 
+            Solo necesita ingresar su dirección de correo electrónico para artículos segundos y posteriores</p>
+            <br>
             <hr>
             <label for="">Cantidad:</label>
             <input type="number" name="quantity" id="quantity">
@@ -73,9 +79,10 @@
             <input type="text" name="country" id="country">
             <button type="submit" class="btn-submit">Enviar</button>
         </form>
+        <br>
         <hr>
-
-        <p>Gracias. En breve lo contactaremos por email.</p>
+        <br><br>
+        <p><span>Gracias. Le enviaremos un correo electrónico en breve para confirmar su pedido.</span></p>
     </div>
 </body>
 </html>
